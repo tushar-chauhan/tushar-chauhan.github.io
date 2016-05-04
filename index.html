@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<table class="table posts">
+  <tbody>
+    {% if paginator.total_pages > 0 %}
+      {% for post in paginator.posts %}
+      <tr>
+        <td>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread">{{ post.title }}</a>
+          <br>{{ post.date | date: "%b %-d, %Y" }} | <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{post.disqus_identifier}}"></a>
+        </td>
+      </tr>
+      {% endfor %}
+    {% else %}
+      <tr>
+        <td>No posts found!</td>
+      </tr>
+    {% endif %}
+
+    <!-- Pagination links -->
+    {% if paginator.total_pages > 5 %}
+      <tr>
+        <td style="text-align: center;">
+          <nav>
+            <ul class="pagination">
+              {% if paginator.previous_page %}
+                <li>
+                  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              {% else %}
+                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+              {% endif %}
+
+              {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                  <li class="active"><a href="#">{{ page }} <span class="sr-only">(current)</span></a></li>
+                {% elsif page == 1 %}
+                  <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                {% else %}
+                  <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                {% endif %}
+              {% endfor %}
+
+              {% if paginator.next_page %}
+                <li>
+                  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+                </li>
+              {% else %}
+                <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+              {% endif %}
+            </ul>
+          </nav>
+        </td>
+      </tr>
+    {% endif %}
+  </tbody>
+</table>
