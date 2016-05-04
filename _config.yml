@@ -15,9 +15,13 @@ url: "https://tushar-chauhan.github.io" # the base hostname & protocol for your 
 twitter_username: chauhan_tushar
 github_username:  tushar-chauhan
 paginate: 5
+repository: tushar-chauhan/tushar-chauhan.github.io.git
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 
 # Plugins
-gems: [jekyll-paginate]
+gems:
+   - jekyll-paginate
