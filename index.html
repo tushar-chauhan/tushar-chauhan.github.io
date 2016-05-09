@@ -9,7 +9,7 @@ layout: default
         <tr>
           <td>
             <div>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread">{{ post.title }}</a>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </div>
             <div>
               {{ post.date | date: "%b %-d, %Y" }} | <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{post.disqus_identifier}}"></a>
