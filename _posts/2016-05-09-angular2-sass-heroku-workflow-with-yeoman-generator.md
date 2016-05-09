@@ -185,6 +185,6 @@ Following are the steps for Heroku deployment(If you have created the Heroku app
 
 This is just an attempt to make Angular2 app development easy to try it out live on Heroku.
 
-In some time we will see some official direction/guidance from the developers of Angular2 regarding project structure and deployment, as they are actively working on [angular-cli](https://github.com/angular/angular-cli) following the success of ember-cli.
+In some time we will see some official direction/guidance from the developers of Angular2 regarding project structure and deployment, as they are actively working on [angular-cli](https://github.com/angular/angular-cli) following the success of [ember-cli](http://ember-cli.com).
 
 I hope people try this workflow out. Please let me know if something doesn't workout for you.
