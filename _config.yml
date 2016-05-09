@@ -6,16 +6,18 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: ""
+title: "Tushar's blog"
 email: ""
 description: > # this means to ignore newlines until "baseurl:"
-
+  A Technical blog(by Tushar Chauhan)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tushar-chauhan.github.io" # the base hostname & protocol for your site
 twitter_username: chauhan_tushar
 github_username:  tushar-chauhan
 paginate: 5
-repository: tushar-chauhan/tushar-chauhan.github.io.git
+repository: tushar-chauhan/tushar-chauhan.github.io
+author:
+  github: tushar-chauhan
 
 # Build settings
 markdown: kramdown
@@ -24,4 +26,8 @@ kramdown:
 
 # Plugins
 gems:
-   - jekyll-paginate
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji

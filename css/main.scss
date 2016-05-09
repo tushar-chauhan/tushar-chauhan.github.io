@@ -1,23 +1,42 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 @charset "utf-8";
 
-$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: "Inconsolata", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-base: $font-family-sans-serif;
+$code-blue: #629FFF;
 
 @import "bootstrap";
+
+p {
+  text-align: justify;
+}
+
+pre {
+  background: #222;
+  color: #FFF;
+  b {
+    color: $code-blue;
+  }
+}
+
 .main-content {
   padding-top: 60px;
+  .post {
+    margin-bottom: 60px;
+  }
 }
 
 .footer {
+  font-size: 14px;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 35px;
-  background-color: #f5f5f5;
+  background-color: #222;
+  border-color: #090909;
   display: table;
   padding-top: 5px;
   z-index: 5;
@@ -26,8 +45,8 @@ $font-family-base: $font-family-sans-serif;
     vertical-align: middle;
     padding-top: 0;
     padding-bottom: 0;
-    > div:not(:last-child) {
-      margin-right: 5px;
+    a {
+      color: #efefef;
     }
   }
 }
@@ -44,19 +63,55 @@ a.github {
   }
 }
 
+.post-content {
+  h3 {
+    font-weight: 700;
+  }
+}
+
 .posts.table {
   tbody {
     tr {
       td {
         text-align: center;
         border: 0;
+        padding: 0;
         a:nth-child(1) {
-          font-size: 30px;
+          font-size: 16px;
         }
         .pagination {
           margin: 0;
           a {
             font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    h2 {
+      font-size: 38px;
+    }
+  }
+
+  .posts.table {
+    tbody {
+      tr {
+        td {
+          text-align: center;
+          border: 0;
+          a:nth-child(1) {
+            font-size: 30px;
+          }
+          .pagination {
+            margin: 0;
+            a {
+              font-size: 14px;
+            }
           }
         }
       }

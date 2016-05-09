@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Tushar's blog
 ---
 
 <table class="table posts">
   <tbody>
     {% if paginator.total_pages > 0 %}
       {% for post in paginator.posts %}
-      <tr>
-        <td>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread">{{ post.title }}</a>
-          <br>{{ post.date | date: "%b %-d, %Y" }} | <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{post.disqus_identifier}}"></a>
-        </td>
-      </tr>
+        <tr>
+          <td>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread">{{ post.title }}</a>
+            <br>
+            {{ post.date | date: "%b %-d, %Y" }} | <a class="post-link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{post.disqus_identifier}}"></a>
+          </td>
+        </tr>
       {% endfor %}
     {% else %}
       <tr>
