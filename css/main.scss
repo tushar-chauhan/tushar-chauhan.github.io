@@ -23,7 +23,7 @@ pre {
 }
 
 .main-content {
-  padding-top: 60px;
+  padding: 60px 0;
   .post {
     margin-bottom: 60px;
   }
@@ -78,7 +78,7 @@ a.github {
         padding: 0;
         div:nth-child(1) {
           a {
-            font-size: 16px;  
+            font-size: 16px;
           }
         }
         .pagination {
