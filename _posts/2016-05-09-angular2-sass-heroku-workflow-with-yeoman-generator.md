@@ -147,8 +147,8 @@ npm start
 E2E tests are usually at the project root, in the 'e2e' folder
 Their filenames must end in `e2e.ts`.
 
-Look for the example `e2e.ts` in the root folder.
-Add more `e2e.ts` files as you wish (although one usually suffices for small projects);
+Look for the example `app.e2e.ts` in the 'e2e' folder.
+Add more `*.e2e.ts` files as you wish (although one usually suffices for small projects);
 
 Thereafter, in another terminal window/tab run them with:
 
