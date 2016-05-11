@@ -144,7 +144,7 @@ You will also need to start your app using
 npm start
 ```
 
-E2E tests are usually at the project root, in the 'e2e' folder
+E2E tests are usually at the project root, in the 'e2e' folder.
 Their filenames must end in `e2e.ts`.
 
 Look for the example `app.e2e.ts` in the 'e2e' folder.
