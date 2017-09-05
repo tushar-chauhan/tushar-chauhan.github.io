@@ -12,6 +12,11 @@ $code-blue: #629FFF;
 
 body {
   font-size: 16px;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 p {
